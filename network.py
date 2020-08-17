@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import requests
 import socket
+import os
 
 def check_localhost():
         localhost = socket.gethostbyname('localhost')
@@ -12,3 +13,4 @@ def check_connectivity():
 
 print("check_localhost(): {} ".format(check_localhost()))
 print("check_connectivity(): {} ".format(check_connectivity()))
+print(help(os))
