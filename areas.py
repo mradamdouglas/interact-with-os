@@ -13,5 +13,5 @@ def circle(radius):
 
 def donut(outside_radius, inside_radius):
     return(circle(outside_radius) - circle(inside_radius))
-    
+
 print(circle(5))
