@@ -1,0 +1,5 @@
+Development:1
+Human Resources:1
+IT infrastructure:2
+Marketing:1
+Sales:1

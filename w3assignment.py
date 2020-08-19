@@ -2,6 +2,7 @@
 
 import re
 import csv
+import os
 def contains_domain(address, domain):
     """Returns True if the email address contains the given,domain,in the domain position, false if not."""
     domain = r'[\w\.-]+@'+domain+'$'
@@ -18,8 +19,12 @@ def replace_domain(address, old_domain, new_domain):
 def main():
     """Processes the list of emails, replacing any instances of the old domain with the new domain."""
     old_domain, new_domain = 'abc.edu', 'xyz.edu'
-    csv_file_location = '<csv_file_location>'
-    report_file = '<path_to_home_directory>' + '/updated_user_emails.csv'
+    ## # TODO: Update file location with csv file location
+    # csv_file_location = '<csv_file_location>'
+    csv_file_location = '/home/adouglasx/repos/interact-with-os/data/user_emails.csv'
+    ## # TODO: Replace path location with path to home directory
+    #report_file = '<path_to_home_directory>' + '/updated_user_emails.csv'
+    report_file = '/home/adouglasx/repos/interact-with-os/data/updated_user_emails.csv'
     user_email_list = []
     old_domain_email_list = []
     new_domain_email_list = []
@@ -43,6 +48,7 @@ def main():
     f.close()
 
     with open(report_file, 'w+') as output_file:
+        print("Writing report file")
         writer = csv.writer(output_file)
         writer.writerows(user_data_list)
         output_file.close()
