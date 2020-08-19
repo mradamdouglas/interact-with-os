@@ -6,7 +6,7 @@ import csv
 starting_dir = os.getcwd()
 
 def filestuff():
-    input_file_name = 'spider.txt'
+    input_file_name = 'data/spider.txt'
     txtfile = open(input_file_name)
     print('Readline: ')
     print(txtfile.readline())
@@ -26,13 +26,13 @@ def filestuff():
         lines.sort()
         print(lines)
 
-    with open("novel.txt", "w") as file:
+    with open("data/novel.txt", "w") as file:
         file.write("It was a dark and stormy night...\n")
-    print("{} filesize: {}".format("novel.txt", os.path.getsize('novel.txt')))
+    print("{} filesize: {}".format("data/novel.txt", os.path.getsize('data/novel.txt')))
 
-    os.rename("novel.txt", "finalwork.txt")
+    os.rename("data/novel.txt", "data/finalwork.txt")
     #os.remove("novel.txt")
-    print("\nDoes 'finalwork.txt' exist?: " + str(os.path.exists("finalwork.txt")))
+    print("\nDoes 'finalwork.txt' exist?: " + str(os.path.exists("data/finalwork.txt")))
 
     print("File size: {}\n".format(os.path.getsize(input_file_name)))
     timestamp = os.path.getmtime(input_file_name)

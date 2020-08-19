@@ -24,4 +24,7 @@ Installed python packages can be found in ```usr/lib/python3/dist-packages```
 
 **datetime** formatting for timestamps and related date/time functions
 
+**re** regex module
+    /usr/share/lib/american-english: user dictionary
+    
 ## File Interaction ##
