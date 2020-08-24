@@ -41,7 +41,7 @@ Installed python packages can be found in ```usr/lib/python3/dist-packages```
 **datetime** formatting for timestamps and related date/time functions
 
 **re** regex module
-    */usr/share/lib/american-english*: user dictionary
+    */usr/share/lib/american-english*: user dictionary.
 
 **subprocess**:  allows scripts to run system commands. i.e. spawn processes, connect to input/output/error pipes, and obtain their return codes. Takes the process name followed by arguments. e.g.:
 
