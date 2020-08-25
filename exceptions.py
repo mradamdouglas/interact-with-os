@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import sys
+import glob
 def try_catch(file):
     try:
         with open(file) as f:
@@ -38,3 +39,10 @@ def RemoveValue(my_list, myVal):
     return my_list
 # my_list = [27, 5, 9, 6, 8]
 # print(RemoveValue(my_list, 27))
+
+def list_files():
+    filelist = (glob.glob("/home/adouglasx/repos/interact-with-os/*.py, recursive=False ))
+    for file in filelist:
+        print(file)
+
+list_files()

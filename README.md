@@ -49,6 +49,10 @@ Installed python packages can be found in ```usr/lib/python3/dist-packages```
 ``subprocess.run(["sleep", "2"])``
 ``subprocess.run(["ls", "-l" "data"])``
 
+**glob**: filename globbing utility.
+
+*glob(pathname, *, recursive=False)*: Return a list of paths matching a pathname pattern. e.g ```filelist = (glob.glob("/home/adouglasx/repos/interact-with-os/*.py, recursive=False ))```
+
 ## Environmental Processing ##
 
 **export** updates environmental variables. e.g. ```export PATH = /usr/bin/mydir```
@@ -56,3 +60,43 @@ Installed python packages can be found in ```usr/lib/python3/dist-packages```
 **unittest**: Classes and utilities for unit testing. https://docs.python.org/3/library/unittest.html
 
 **doctest**: a streamlined and more efficient version of unittest.  See documentation. https://docs.python.org/3/library/doctest.html
+
+## Bash stuff ##
+Standard outputs:
+*0*: STDIN
+*1*: STDOUT
+*2*: STDERR
+
+This will take the pass the contexts of new_file.txt to streams_err.py as user input  (i.e. input(data)),  then output from the STDERR to error_file.txt: ```e.g. streams_err.py < new_file.txt 2> error_file.txt```
+
+## Signal Processing ##
+Signals are tokens delivered to running processes to indicate a desired action.
+
+kill -(signal) <process>
+
+**SIGINT**: (CNTL+C) Signal interrupt.  Interrupts a command and stops a process.
+
+**SIGSTOP**: (CNTL+Z) Signal pause. Sends a signal to pause the process and can be restarted with 'fg'
+
+**SIGCONT**: (fg) Tells a process to pick up where it left off after a SIGSTOP.
+
+**SIGTERM**: A kill command that politely asks a signal to stop. Can be ignored or blocked. Does NOT kill the child process. It allows child process to complete.
+
+**SIGKILL**: used for immediate termination of a process. It CANNOT be ignored or blocked. Child processes are also killed.
+
+### Addtl commands ###
+**ps**: lists the processes executing in the the current terminal for the current user
+
+**ps ax**: lists all processes currently executing for all userlist
+
+**ps e**: shows the environment for the processes listed
+
+**kill <PID>**: sends the SIGTERM signal to the process identified by pid
+
+**fg**: causes a job that was stopped or in the background to be returned to the foreground
+
+**bg**: causes a job that was stopped to go to the background
+
+**jobs**: lists the jobs currently running or stopped
+
+**top**: shows the processes currently using the most CPU time (press 'q' to quit)
