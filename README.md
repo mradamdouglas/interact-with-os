@@ -53,6 +53,24 @@ Installed python packages can be found in ```usr/lib/python3/dist-packages```
 
 *glob(pathname, *, recursive=False)*: Return a list of paths matching a pathname pattern. e.g ```filelist = (glob.glob("/home/adouglasx/repos/interact-with-os/*.py, recursive=False ))```
 
+**operator**: exports a set of functions implemented in C corresponding to the intrinsic operators of Python.  For example, operator.add(x, y) is equivalent to the expression x+y.
+
+*operator.itemgetter(n)*: gets the item identified as the argument. e.g.: given:
+
+``fruit = {"oranges": 3, "apples": 5, "bananas": 7, "pears": 2}
+sorted(fruit.items())  RETURNS:
+[('apples', 5), ('bananas', 7), ('oranges', 3), ('pears', 2)]``
+
+Sort is on the first item in the set (i.e. type of fruit):
+
+``sorted(fruit.items(), key=operator.itemgetter(0))  RETRUNS:
+[('apples', 5), ('bananas', 7), ('oranges', 3), ('pears', 2)]``
+
+Sort is on the second item in the set (i.e. number of items):
+
+``sorted(fruit.items(), key=operator.itemgetter(1))  RETURNS:
+[('pears', 2), ('oranges', 3), ('apples', 5), ('bananas', 7)] ``
+
 ## Environmental Processing ##
 
 **export** updates environmental variables. e.g. ```export PATH = /usr/bin/mydir```

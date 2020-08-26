@@ -70,12 +70,6 @@ def read_logfiles(file):
 
 #the sample file used here is not an ideal log file
 # read_logfiles("/var/log/mintsystem.log")
-print("Curr dir {}".format(os.getcwd()))
-
-if os.path.exists(os.path.abspath(r"/var/log")):
-    print("Directory exists")
-else:
-    print("Directory does not exist")
 
 print("\nEntering '$?' on the command line will display the exit code. NOTE: Don't sweat the 'command not found' message")
 sys.exit(3)

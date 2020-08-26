@@ -1,0 +1,11 @@
+May 27 11:45:40 ubuntu.local ticky: INFO: Created ticket [#1234] (mdouglas)
+Jun 1 11:06:48 ubuntu.local ticky: ERROR: Connection to DB failed (dbrown)
+Jun 2 11:45:40 ubuntu.local ticky: INFO: Commented on ticket [#2345] (gsmith)
+Jun 2 11:56:48 ubuntu.local ticky: ERROR: Connection to DB failed (rr.robinson)
+Jun 2 12:45:40 ubuntu.local ticky: INFO: Created ticket [#2370] (jbiden)
+Jun 3 13:06:48 ubuntu.local ticky: ERROR: Connection to DB failed (mobama)
+Jun 3 13:45:40 ubuntu.local ticky: INFO: Created ticket [#3305] (bobama)
+Jun 3 14:06:48 ubuntu.local ticky: ERROR: Tried to add information to closed ticket (cawd)
+Jun 3 14:45:40 ubuntu.local ticky: INFO: Created ticket [#3380] (orested)
+Jun 3 15:06:48 ubuntu.local ticky: ERROR: Timeout while retrieving information (mdouglas)
+
