@@ -54,7 +54,7 @@ def write_user_report(filename, dictlist):
 			file.write(outrec)
 
 def write_error_report(filename, dictlist):
-	keyrec="Error, Count\n"
+	keyrec="Error,Count\n"
 	with open(filename, "w") as file:
 		file.write(keyrec)
 		for item in dictlist:
