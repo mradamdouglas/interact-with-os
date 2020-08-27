@@ -5,8 +5,8 @@ import sys
 
 error_dict={}
 user_dict={}
-info_pattern=r"ticky: INFO: ([\w ]*) (\[.*)"
-error_pattern=r"ticky: ERROR: ([\w ]*) (\(.*)"
+info_pattern=r"ticky: INFO ([a-zA-Z0-9 ']*) (\[.*)"
+error_pattern=r"ticky: ERROR ([a-zA-Z0-0 '']*) (\(.*)"
 name_pattern=r"\((\S*)\)$"
 
 def get_errors(input_file):
@@ -15,12 +15,15 @@ def get_errors(input_file):
 		for record in reader:
 			username = get_username(record)
 			if username:
+				# print(username + "   " + record)
 				update_user_table(username, record)
 				update_error_table(username, record)
 
 def get_username(log_record):
 	result=re.search(name_pattern, log_record)
 	if result != None:
+		print(result.groups())
+		print(result[1])
 		name=result[1]
 		if name not in user_dict:
 			user_dict[name] = [0,0]
@@ -31,6 +34,7 @@ def update_user_table(username, log_record):
 	inforec = re.search(info_pattern, log_record)
 	if inforec != None:
 		user_dict[username][0] += 1
+		print(log_record)
 
 def update_error_table(username, log_record):
 	errorrec=re.search(error_pattern, log_record)

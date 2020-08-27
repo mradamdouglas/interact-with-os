@@ -2,7 +2,6 @@
 import csv
 
 fname = 'user_statistics.csv'
-print("\nReading user_stat file as dictionary:")
 with open(fname) as file:
     reader = csv.DictReader(file)
     for row in reader:

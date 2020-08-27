@@ -1,4 +1,7 @@
 Error,Count
-Connection to DB failed,3
-Tried to add information to closed ticket,1
-Timeout while retrieving information,1
+Tried to add information to closed ticket,6
+Timeout while retrieving information,6
+Ticket doesn't exist,4
+Connection to DB failed,4
+The ticket was modified while updating,3
+Permission denied while closing ticket,3
