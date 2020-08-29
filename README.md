@@ -40,8 +40,12 @@ Installed python packages can be found in ```usr/lib/python3/dist-packages```
 
 **datetime** formatting for timestamps and related date/time functions
 
+**argparse**: Command line parsing library. Handles both optional and positional arguments. Produces highly informative usage messages. Supports parsers that dispatch to sub-parsers.
+
 **re** regex module
     */usr/share/lib/american-english*: user dictionary.
+
+**logging**: logging package for python
 
 **subprocess**:  allows scripts to run system commands. i.e. spawn processes, connect to input/output/error pipes, and obtain their return codes. Takes the process name followed by arguments. e.g.:
 
@@ -71,6 +75,8 @@ Sort is on the second item in the set (i.e. number of items):
 ``sorted(fruit.items(), key=operator.itemgetter(1))  RETURNS:
 [('pears', 2), ('oranges', 3), ('apples', 5), ('bananas', 7)] ``
 
+**PIL**: Python imaging library.  PIL.Image
+
 ## Environmental Processing ##
 
 **export** updates environmental variables. e.g. ```export PATH = /usr/bin/mydir```
@@ -86,6 +92,15 @@ Standard outputs:
 *2*: STDERR
 
 This will take the pass the contexts of new_file.txt to streams_err.py as user input  (i.e. input(data)),  then output from the STDERR to error_file.txt: ```e.g. streams_err.py < new_file.txt 2> error_file.txt```
+
+## Threading/Concurrent Processing ##
+Executor: The process that's in charge of distributing the work among the different workers.
+
+**concurrent.futures** - Execute computations asynchronously using threads or processes. Has multiple executors: one for using threads (ThreadPoolExecutor) and another for using processes.
+
+**concurrent.thread** - Implements ThreadPoolExecutor.
+
+**asynchio**:
 
 ## Signal Processing ##
 Signals are tokens delivered to running processes to indicate a desired action.

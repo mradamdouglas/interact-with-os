@@ -13,4 +13,4 @@ def check_connectivity():
 
 print("check_localhost(): {} ".format(check_localhost()))
 print("check_connectivity(): {} ".format(check_connectivity()))
-print(help(os))
+#print(help(os))

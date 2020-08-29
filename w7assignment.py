@@ -15,16 +15,13 @@ def get_errors(input_file):
 		for record in reader:
 			username = get_username(record)
 			if username:
-				# print(username + "   " + record)
 				update_user_table(username, record)
 				update_error_table(username, record)
 
 def get_username(log_record):
 	result=re.search(name_pattern, log_record)
 	if result != None:
-		print(result.groups())
-		print(result[1])
-		name=result[1]
+		name=result.group(1)
 		if name not in user_dict:
 			user_dict[name] = [0,0]
 		return name
@@ -40,7 +37,7 @@ def update_error_table(username, log_record):
 	errorrec=re.search(error_pattern, log_record)
 	if errorrec != None:
 		user_dict[username][1] += 1
-		error = errorrec[1]
+		error = errorrec.group(1)
 		if error not in error_dict:
 			error_dict[error] = 0
 		error_dict[error] += 1
