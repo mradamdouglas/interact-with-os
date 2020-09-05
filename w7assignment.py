@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+'''This program takes the syslog.log file as input and searches for 'ticky' errors.
+   the output files are user_statistics.csv and error_message.csv   
+'''
+ 
 import re
 import operator
 import sys
@@ -61,7 +65,9 @@ def write_error_report(filename, dictlist):
 		for item in dictlist:
 			outrec="{},{}\n".format(item[0],item[1])
 			file.write(outrec)
-
-get_errors(sys.argv[1])
+infile='syslog.log'
+if len(sys.argv) > 1:
+	infile = sys.argv[1] 
+get_errors(infile)
 write_user_report("user_statistics.csv", sort_dict(user_dict, 0, False))
 write_error_report("error_message.csv", sort_dict(error_dict, 1, True))

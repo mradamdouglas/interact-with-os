@@ -117,7 +117,7 @@ kill -(signal) <process>
 
 **SIGKILL**: used for immediate termination of a process. It CANNOT be ignored or blocked. Child processes are also killed.
 
-### Addtl commands ###
+### Addtl BASH commands ###
 **ps**: lists the processes executing in the the current terminal for the current user
 
 **ps ax**: lists all processes currently executing for all userlist
@@ -133,3 +133,15 @@ kill -(signal) <process>
 **jobs**: lists the jobs currently running or stopped
 
 **top**: shows the processes currently using the most CPU time (press 'q' to quit)
+
+**rsync**: (remote sync) is a utility for efficiently transferring and synchronizing files between a computer and an external hard drive and across networked computers by comparing the modification time and size of files. One of the important features of rsync is that it works on the delta transfer algorithm, which means it'll only sync or copy the changes from the source to the destination instead of copying the whole file. This ultimately reduces the amount of data sent over the network.
+Basic syntax:
+
+``rsync [Options] [Source-Files-Dir] [Destination]``
+
+    -v: Verbose output
+    -q: Suppress message output
+    -a: Archive files and directory while synchronizing
+    -r: Sync files and directories recursively
+    -b: Take the backup during synchronization
+    -z: Compress file data during the transfer

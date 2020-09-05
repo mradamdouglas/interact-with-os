@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3
 
 '''This module REQUIRES Python 3.6 SPECIFICALLY on THIS system to avoid
 import conflicts with shutil!!!!!'''
